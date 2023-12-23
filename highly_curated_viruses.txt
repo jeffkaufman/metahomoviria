@@ -1,0 +1,42 @@
+11234	Measles
+2560602	Mumps
+11250	Respiratory syncytial virus (RSV)
+1570291	Ebola
+11292	Rabies
+1980413	Hantavirus
+11320	Flu A
+11520	Flu B
+10912	Rotavirus
+11041	Rubella (German Measles)
+291484	Hepatitis E
+11021	Eastern equine encephalitis virus (EEE)
+11036	Venezuelan equine encephalitis virus
+3052230	Hepatitis C
+11089	Yellow fever
+11082	West Nile virus
+64320	Zika virus
+12637	Dengue virus
+1335626	MERS
+2697049	Covid-19
+2901879	SARS
+142786	Norovirus
+12080	Polio
+147711	Rhinovirus
+12092	Hepatitis A
+11676	AIDS (HIV)
+10407	Hepatitis B
+3050292	Herpes simplex virus 1 (HSV-1)
+10335	Chickenpox and Shingles (VZV)
+10358	Cytomegalovirus (CMV)
+10376	Mono (EBV)
+10243	Cowpox
+10244	Monkeypox
+10255	Smallpox
+12643	Mousepox
+10508	Adenovirus
+12475	Hepatitis D
+10566	Human Papilloma virus (HPV)
+46839	Colorado tick fever virus
+11083	Powassan virus
+33727	Marburg virus
+37124	Chikungunya virus

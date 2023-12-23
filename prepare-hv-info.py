@@ -20,7 +20,7 @@ def add_all_ancestors(taxid, relevant_taxids):
 
 relevant_taxids = set()
 friendly_names = {}
-with open("curated_viruses.txt") as inf:
+with open("highly_curated_viruses.txt") as inf:
   for line in inf:
     taxid, name = line.rstrip("\n").split("\t")
     friendly_names[taxid] = name
@@ -34,18 +34,21 @@ for taxid in list(parent):
 # first name is scientific name
 names = defaultdict(list)
 
-for taxid, name in friendly_names.items():
-  names[taxid].append(name)
-
 with open("names.dmp") as inf:
   for line in inf:
     taxid, name, unique_name, name_class = line.replace("\t|\n", "").split(
       "\t|\t")
 
     if taxid in relevant_taxids:
-      if name not in names[taxid]:
+      if name_class == "genbank common name":
+        names[taxid].insert(0, name)
+      else:
         names[taxid].append(name)
 
+friendly_names[10239] = "Viruses";
+for taxid, name in friendly_names.items():
+  names[taxid].insert(0, name)
+        
 with open("html/data.json", "w") as outf:
   json.dump({
     "parent": parent,

@@ -9,6 +9,17 @@
   .highlight {
     font-weight: bold;
   }
+  .hide {
+    display: none;
+  }
+  #success {
+    border: 2px solid black;
+    border-radius: 0.25em;
+    padding: 1em;
+  }
+  a {
+    text-decoration: none;
+  }
 </style>
 <body>
 <h1>Metahomoviria</h1>
@@ -17,8 +28,15 @@ Guess a species of human-infecting viruses:
 
   <p>
 
-  <input list=hv_datalist id=hv_selector size=50></input>
+  <input list=hv_datalist id=hv_selector size=45></input>
   <datalist id=hv_datalist></datalist>
+
+  <div id=success class=hide>
+  It was <span id=target_name></span> and you guessed it; you win!
+  <br>
+  <br>
+  Refresh the page to play again.
+  </div>
 
   <ul id=tree_root></ul>
 
@@ -71,7 +89,14 @@ function render_tree(children, names, highlight_taxid, target_taxid, ul, parent_
       if (child_taxid == target_taxid && highlight_taxid != target_taxid) {
         li.innerText = "???";
       } else {
-        li.innerText = `${names[child_taxid][0]} (${child_taxid})`;
+        const a = document.createElement("a");
+        a.innerText = names[child_taxid][0];
+        a.target = "_blank";
+        const search_name = names[child_taxid][0].replace(/\s*\([^)]*\)\s*/, '');
+        
+        // a.href = `https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Tree&id=${child_taxid}&lvl=3&lin=f&keep=1&srchmode=1&unlock`;
+        a.href = `https://en.wikipedia.org/wiki/${search_name}`;
+        li.appendChild(a);
       }
 
       ul.appendChild(li);
@@ -114,6 +139,7 @@ function render(data) {
   const leaves = build_leaves(data.parent, children, data.names);
   const guesses = [];
   const target = leaves[Math.floor(Math.random() * leaves.length)];
+  const [target_name, target_taxid] = target;
 
   render_hv_list(leaves);
 
@@ -124,6 +150,12 @@ function render(data) {
       if (name == selected_value) {
         e.target.value = "";
         handle_guess(name, taxid, guesses, target, data.parent, data.names);
+        if (taxid == target_taxid) {
+          window.hv_selector.classList.add("hide");
+          window.success.classList.remove("hide");
+          window.target_name.innerText = target_name;
+        }
+        
         return;
       }
     }

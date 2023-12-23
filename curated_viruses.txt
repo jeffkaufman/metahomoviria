@@ -1,0 +1,226 @@
+68887	Hepatitis TT
+11234	Measles
+12730	Parainfluenza type 1
+11216	Parainfluenza type 3
+3052223	Hendra virus
+3052225	Nipah virus
+341053	Beilong virus
+2560526	Parainfluenza type 4
+2560525	Parainfluenza type 2
+2560580	Parainfluenza type 5
+1384672	Mumps G
+1395181	Mumps A
+1395183	Mumps N
+1554500	Hervey virus
+152219	Menangle virus
+1452514	Sosuga virus
+162145	Metapneumovirus
+208893	RSV A
+208895	RSV B
+1570291	Ebola
+33727	Marburg virus
+378809	Ravn virus
+2913478	Mundri virus
+290008	Isfahan virus
+1046251	Maraba virus
+11272	Chandipura virus
+11277	Vesicular stomatitis Indiana virus
+11292	Rabies
+12538	Mokola
+38767	Duvenhage virus
+1987017	Bas-Congo virus
+318848	Le Dantec virus
+318843	Almpiwar virus
+2169991	Junin virus
+2905917	Pichinde virus
+3052302	Chapare virus
+3052303	Lymphocytic choriomeningitis virus
+3052307	Guanarito virus
+3052310	Lassa virus
+3052314	Lujo virus
+3052317	Machupo virus
+1980413	Hantavirus
+2795181	Songling virus
+2825847	Yezo virus
+3052514	Dugbe virus
+3052518	Crimean-Congo hemorrhagic fever virus
+1615758	Tofla virus
+1712570	Kasokero virus
+35304	Bunyamwera virus
+3052384	Bwamba virus
+192196	Caraparu virus
+1678225	Catu virus
+1678234	Guama virus
+80941	Guaroa virus
+273341	Ilesha virus
+35514	Keystone virus
+11580	Snowshoe hare virus
+11577	La Crosse virus
+273352	Macaua virus
+348013	Madrid virus
+35515	Melao virus
+118655	Oropouche virus
+273345	Fort Sherman virus
+1623310	Tataguine virus
+2609058	Baakal virus
+629726	Alenquer virus
+629725	Chandiru virus
+629727	Chagres virus
+1649829	Cocle virus
+1000646	Echarate virus
+1004889	Maldonado virus
+1775957	Medjerda Valley virus
+1569922	Mukawa virus
+1048854	Munguba virus
+206160	Sandfly fever Naples virus
+11588	Rift Valley fever virus
+688699	Sandfly fever Turkey virus
+11587	Punta Toro virus
+11590	Toscana virus
+1764086	Zerdali virus
+2748958	Severe fever with thrombocytopenia syndrome virus
+1219465	Lone Star virus
+1763596	Guertu virus
+1216928	Heartland virus
+1851087	Kabuto mountain virus
+11591	Uukuniemi virus
+2843070	Tanzavirus
+11318	Dhori virus
+1428581	Upolu virus
+102793	H5N1
+102796	H9N2
+114727	H1N1
+114729	H2N2
+119210	H3N2
+333278	H7N9
+11520	Flu B
+11552	Flu C
+688436	Quaranfil virus
+40057	Lebombo virus
+40058	Orungo virus
+204269	Great Island virus
+28875	Rotavirus A
+28876	Rotavirus B
+36427	Rotavirus C
+1348384	Rotavirus H
+77763	Banna virus
+46839	Colorado tick fever virus
+11041	Rubella
+291484	Hepatitis E
+11020	Barmah Forest virus
+11021	Eastern equine encephalitis virus
+11029	Ross River virus
+11033	Semliki Forest virus
+11034	Sindbis virus
+11036	Venezuelan equine encephalitis virus
+11039	Western equine encephalitis virus
+37124	Chikungunya virus
+59303	Sagiyama virus
+59301	Mayaro virus
+59304	Una virus
+60877	Tonate virus
+2083199	Mosso das Pedras virus
+2169701	Onyong-nyong virus
+3052230	Hepatitis C virus
+3052236	Hepacivirus B
+1805494	Bamaga virus
+3052606	Pegivirus H
+3052608	Hepatitis G virus
+11089	Yellow fever
+38837	Banzi virus
+64307	Gadgets Gully virus
+11072	Japanese encephalitis virus
+64310	Kadam virus
+44024	Kokobera virus
+44027	Stratford virus
+33743	Kyasanur Forest disease virus
+172148	Alkhumra hemorrhagic fever virus
+11085	Langat virus
+11086	Louping ill virus
+35279	Meaban virus
+64300	Modoc virus
+11079	Murray Valley encephalitis virus
+64292	Ntaya virus
+12542	Omsk hemorrhagic fever virus
+11083	Powassan virus
+64285	Rio Bravo virus
+64288	Royal Farm virus
+64284	Saboya virus
+64314	Potiskum virus
+40012	Saumarez Reef virus
+64286	Usutu virus
+164416	Wesselsbron virus
+11082	West Nile virus
+64320	Zika virus
+64305	Cacipacore virus
+12637	Dengue virus
+11084	Tick-borne encephalitis virus
+59563	Ilheus virus
+64315	Rocio virus
+11080	Saint Louis encephalitis virus
+145856	Picobirnavirus
+11047	Equine arteritis virus
+11137	Coronavirus 229E
+277944	Coronavirus NL63
+290028	Coronavirus HKU1
+31631	Coronavirus OC43
+1335626	MERS
+2697049	Covid-19
+2901879	SARS
+2053026	Yichang virus
+95342	Sapporo virus
+82658	Lordsdale virus
+94433	Camberwell virus
+99565	Chiba virus
+122928	Norovirus GI
+122929	Norovirus GII
+262897	Norovirus GIV
+2779846	Sapporo-HK299 virus
+512169	Tulane virus
+12103	Cardiovirus
+586418	Cosavirus
+138948	Coxsackievirus A
+12080	Polio type 1
+12083	Polio type 2
+12086	Polio type 3
+147711	Rhinovirus A
+147712	Rhinovirus B
+463676	Rhinovirus C
+12092	Hepatitis A
+72149	Aichivirus A
+194965	Aichivirus B
+688449	Salivirus
+1511804	Rosavirus
+1803956	Parechovirus A
+1803957	Ljungan virus
+1511782	Pasivirus
+2219049	Husavirus
+39733	Astrovirus
+45617	Human endogenous retrovirus K
+11676	HIV-1
+11709	HIV-2
+11640	Foamy virus
+10407	Hepatitis B
+3050292	Herpes simplex virus 1
+3050293	Herpes simplex virus 2
+10335	Chickenpox
+10358	Cytomegalovirus
+40272	Roseolovirus
+10376	Epstein-Barr virus
+3050300	Kaposi's sarcoma herpesvirus
+1891762	BK virus
+10632	John-Cunningham virus
+10566	Human Papilloma virus
+1511891	Adeno-associated virus
+10243	Cowpox
+10244	Monkeypox
+10245	Vaccinia virus
+10255	Smallpox
+12643	Mousepox
+2200830	Akhmeta virus
+10258	Orf virus
+10279	Molluscum contagiosum virus
+38804	Yaba virus
+99000	Tanapox virus
+10508	Adenovirus
+12475	Hepatitis D

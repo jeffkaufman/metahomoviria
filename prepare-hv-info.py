@@ -45,10 +45,42 @@ with open("names.dmp") as inf:
       else:
         names[taxid].append(name)
 
-friendly_names[10239] = "Viruses";
+for find, replace in [
+    ("Vira", "Viruses"),
+    ("Riboviria", "Riboviria (RNA Viruses)"),
+    ("Orthornavirae", "Orthornavirae (RNA Polymerase Viruses)"),
+    ("Negarnaviricota", "Negarnaviricota (Negative-strand RNA Viruses)"),
+    ("Paramyxoviridae", "Paramyxoviridae (Enveloped Negative-strand RNA Viruses)"),
+    ("Filoviridae", "Filoviridae (Hemorrhagic Fever Viruses)"),
+    ("Polyploviricotina", "Polyploviricotina (Multi-segmented RNA Viruses)"),
+    ("Orthomyxoviridae", "Orthomyxoviridae (Influenza-like Viruses)"),
+    ("Reovirales", "Sedoreoviridae (Double-Capsid RNA Viruses)"),
+    ("Kitrinoviricota", "Kitrinoviricota (Positive-strand RNA Viruses)"),
+    ("Alsuviricetes", "Alsuviricetes (Alpha Subgroup Positive-strand RNA Viruses)"),
+    ("Hepelivirales", "Hepelivirales (Hepatitis E-related Viruses)"),
+    ("arboviruses group A", "Arboviruses A (usually mosquito-transmitted)"),
+    ("Flaviviridae", "Flaviviridae (usually mosquito- and tick-transmitted)"),
+    ("Orthoflavivirus", "Orthoflavivirus (usually mosquito- and tick-transmitted)"),
+    ("Pisoniviricetes", "Pisoniviricetes"),
+    ("Betacoronavirus", "Betacoronavirus"),
+    ("Picornavirales", "Picornavirales"),
+    ("HCoV-SARS", "HCoV-SARS (SARS-like Coronaviruses"),
+    ("Picornaviridae", "Picornaviridae"),
+    ("common cold viruses", "Enteric Viruses (Gastrointestional)"),
+    ("Revtraviricetes", "Revtraviricetes (Reverse Transcriptase Viruses)"),
+    ("Orthoherpesviridae", "Orthoherpesviridae (Herpes Viruses)"),
+    ("Alphaherpesvirinae", "Alphaherpesvirinae (Rapidly reproducing Herpes Viruses)"),
+    ("Bamfordvirae", "Bamfordvirae (Double Jelly Roll Capsid Viruses)"),
+    ("Orthopoxvirus", "Orthopoxvirus (Pox viruses)"),
+]:
+  for taxid in names:
+    for name in names[taxid]:
+      if name == find:
+        friendly_names[taxid] = replace
+
 for taxid, name in friendly_names.items():
   names[taxid].insert(0, name)
-        
+
 with open("html/data.json", "w") as outf:
   json.dump({
     "parent": parent,

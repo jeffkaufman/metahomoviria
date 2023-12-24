@@ -146,6 +146,13 @@ function render(data) {
 
   render_hv_list(leaves);
 
+  if (false) {
+    // expand the whole tree for debugging
+    for (const guess of leaves) {
+      handle_guess(guess[0], guess[1], guesses, guess, data.parent, data.names);
+    }
+  }
+  
   hv_selector.onchange = function(e) {
     hv_selector.classList.remove("warning");
     const selected_value = e.target.value;

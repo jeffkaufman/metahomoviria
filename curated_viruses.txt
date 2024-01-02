@@ -1,5 +1,5 @@
 68887	Hepatitis TT
-11234	Measles
+11234	Morbillivirus hominis (Measles)
 12730	Parainfluenza type 1
 11216	Parainfluenza type 3
 3052223	Hendra virus
@@ -8,16 +8,16 @@
 2560526	Parainfluenza type 4
 2560525	Parainfluenza type 2
 2560580	Parainfluenza type 5
-1384672	Mumps G
-1395181	Mumps A
-1395183	Mumps N
+1384672	MuV G (Mumps G)
+1395181	MuV A (Mumps A)
+1395183	MuV N (Mumps N)
 1554500	Hervey virus
 152219	Menangle virus
 1452514	Sosuga virus
 162145	Metapneumovirus
-208893	RSV A
-208895	RSV B
-1570291	Ebola
+208893	Respiratory syncytial virus A (RSV A)
+208895	Respiratory syncytial virus B (RSV B)
+1570291	Ebolavirus (Ebola)
 33727	Marburg virus
 378809	Ravn virus
 2913478	Mundri virus

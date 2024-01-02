@@ -31,8 +31,8 @@ This is a game where you're trying to guess which human-infecting
 virus the computer has chosen.  Each time you guess the computer will
 reveal the lowest taxonomic clade that they both belong to.  For
 example, SARS and Influenza are both RNA viruses that use RNA polymerase, so
-if you guessed SARS and the answer was the Flu then it would tell you
-they were both Orthornavirae (RNA Polymerase Viruses) in common.
+if you'd guessed SARS and the answer were the Flu then it would tell you
+they were both Orthornavirae (RNA Polymerase Viruses).
 
 <p>
 
@@ -51,6 +51,23 @@ Guess a species of human-infecting viruses:
   </div>
 
   <ul id=tree_root></ul>
+
+  <p>
+  
+  <button id=reveal_answer>Reveal Answer</button>
+
+  <p>
+  
+  <button id=reveal_tree>Reveal Entire Taxonomy</button>
+
+  <p>
+  
+  <a href="https://github.com/jeffkaufman/metahomoviria">source code</a>
+
+  <p>
+
+  <i>Inspired by <a href="https://metazooa.com/">Metazooa</a></i>
+
 
 <script>
 fetch("data.json").then(r => {
@@ -121,15 +138,27 @@ function render_tree(children, names, highlight_taxid, target_taxid, ul, parent_
   }
 }
 
-function render_hv_list(leaves) {
+function render_hv_list(leaves, guesses) {
+  window.hv_datalist.innerHTML = '';
   for (const [name, taxid] of leaves) {
+    let already_guessed = false;
+    for (const [name_guessed, taxid_guessed] of guesses) {
+      if (taxid == taxid_guessed) {
+        already_guessed = true;
+        break;
+      }
+    }
+    if (already_guessed) {
+      continue;
+    }
+    
     const option = document.createElement("option");
     option.value = name;
     window.hv_datalist.appendChild(option);
   }
 }
 
-function handle_guess(name, taxid, guesses, target, parent, names) {
+function handle_guess(name, taxid, leaves, guesses, target, parent, names) {
   guesses.push([name, taxid]);
   const guesses_including_target = [target, ...guesses];
 
@@ -144,6 +173,14 @@ function handle_guess(name, taxid, guesses, target, parent, names) {
   const guess_children = build_children(guess_parent);
   const [target_name, target_taxid] = target;
   render_whole_tree(guess_children, names, taxid, target_taxid);
+  render_hv_list(leaves, guesses);
+}
+
+function expand_all(guesses, leaves, data, target) {
+  for (const guess of leaves) {
+    handle_guess(guess[0], guess[1], leaves, guesses, guess, data.parent, data.names);
+  }
+  handle_guess(target[0], target[1], leaves, guesses, target, data.parent, data.names);
 }
 
 function render(data) {
@@ -153,14 +190,7 @@ function render(data) {
   const target = leaves[Math.floor(Math.random() * leaves.length)];
   const [target_name, target_taxid] = target;
 
-  render_hv_list(leaves);
-
-  if (false) {
-    // expand the whole tree for debugging
-    for (const guess of leaves) {
-      handle_guess(guess[0], guess[1], guesses, guess, data.parent, data.names);
-    }
-  }
+  render_hv_list(leaves, guesses);
   
   hv_selector.onchange = function(e) {
     hv_selector.classList.remove("warning");
@@ -168,7 +198,7 @@ function render(data) {
     for (const [name, taxid] of leaves) {
       if (name == selected_value) {
         e.target.value = "";
-        handle_guess(name, taxid, guesses, target, data.parent, data.names);
+        handle_guess(name, taxid, leaves, guesses, target, data.parent, data.names);
         if (taxid == target_taxid) {
           window.hv_selector.classList.add("hide");
           window.success.classList.remove("hide");
@@ -180,9 +210,16 @@ function render(data) {
     }
     hv_selector.classList.add("warning");
   };
+
+  reveal_tree.onclick = function(e) {
+    expand_all(guesses, leaves, data, target);
+  };
+
+  reveal_answer.onclick = function(e) {
+    handle_guess(target[0], target[1], leaves, guesses, target,
+                 data.parent, data.names);
+  };
 }
-
-
 
 </script>
 </html>
